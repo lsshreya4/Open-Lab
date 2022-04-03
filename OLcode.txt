@@ -1,0 +1,85 @@
+int pir1 = 5; 
+int pir2 = 2;
+int pir3 = 3; 
+int pir4 = 4; 
+int relay1 = 8; 
+int relay2 = 9;
+int relay3 = 10;
+int relay4 = 11;
+ 
+void setup()
+{
+ Serial.begin(9600); // baud rate
+pinMode(pir1, INPUT);
+pinMode(pir2, INPUT);
+pinMode(pir3, INPUT);
+pinMode(pir4, INPUT); 
+pinMode(relay1, OUTPUT);
+pinMode(relay2, OUTPUT);
+pinMode(relay3, OUTPUT);
+pinMode(relay4, OUTPUT);
+digitalWrite(relay1, LOW); 
+digitalWrite(relay2, LOW);
+digitalWrite(relay3, LOW);
+digitalWrite(relay4, LOW);
+}
+void loop()
+{
+  if( digitalRead(pir1) == HIGH) 
+ {
+   Serial.println("Human detected at zone 1"); 
+   digitalWrite(relay1, HIGH); 
+   delay(1000); 
+  
+ } 
+  else 
+ {
+   Serial.println("Human not detected zone 1"); 
+   digitalWrite(relay1, LOW); 
+   delay(100); 
+  
+ } 
+  
+   if( digitalRead(pir2) == HIGH) 
+ {
+   Serial.println("Human detected at zone 2"); 
+   digitalWrite(relay2, HIGH); 
+   delay(1000); 
+  
+ } 
+  else 
+ {
+   Serial.println("Human not detected zone 2"); 
+   digitalWrite(relay2, LOW); 
+   delay(100);
+  }  
+    if( digitalRead(pir3) == HIGH) 
+ {
+   Serial.println("Human detected at zone 3"); 
+   digitalWrite(relay3, HIGH); 
+   delay(1000); 
+  
+ } 
+  else 
+ {
+   Serial.println("Human not detected zone 3"); 
+   digitalWrite(relay3, LOW); 
+   delay(100); 
+  
+ } 
+  
+    if( digitalRead(pir4) == HIGH) 
+ {
+   Serial.println("Human detected at zone 4"); 
+   digitalWrite(relay4, HIGH); 
+   delay(1000); 
+  
+ } 
+  else 
+ {
+   Serial.println("Human not detected zone 4"); 
+   digitalWrite(relay4, LOW); 
+   delay(100); 
+  
+ } 
+}
