@@ -1,3 +1,2 @@
-OBJECTIVE
-To save power and to
- make a smarter home.
+OBJECTIVE:
+To save power and to make your home smarter.
