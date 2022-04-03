@@ -80,6 +80,8 @@ void loop()
    Serial.println("Human not detected zone 4"); 
    digitalWrite(relay4, LOW); 
    delay(100); 
+   
+   
   
  } 
 }
